@@ -1,0 +1,712 @@
+
+
+module.ApplicationResources.random_string.storage_account_name: Refreshing state... [id=p5i4e]
+module.KeyVault.random_password.xyz-random-password: Refreshing state... [id=none]
+module.KeyVault.data.azurerm_client_config.current: Reading...
+azurerm_resource_group.rg1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb]
+module.KeyVault.data.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wNGIwNzc5NS04ZGRiLTQ2MWEtYmJlZS0wMmY5ZTFiZjdiNDY7b2JqZWN0SWQ9NzBkODQ5YTAtMGUyYy00MzQyLWIxMTQtZTgxYzQ4OTJkZGQ2O3N1YnNjcmlwdGlvbklkPTI0OGYyNmY3LWI0YjYtNDc2Mi1iNmQ4LTVkMjUzODFhNTdlYzt0ZW5hbnRJZD04OWM5MTE0MC1jNDA5LTQ1N2MtOTcxMy0wZmFjZTQyOWVjMjM=]
+module.ApplicationResources.azurerm_public_ip.pip1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/publicIPAddresses/PIP-XYZWeb-LB]
+module.KeyVault.azurerm_key_vault.kv1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.KeyVault/vaults/KV-XYZWeb]
+module.vnet.azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/virtualNetworks/VNET-Dev-XYZWeb]
+module.DatabaseResources.azurerm_private_dns_zone.dns1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/privateDnsZones/xyzwebonlinesales.postgres.database.azure.com]
+module.ApplicationResources.azurerm_storage_account.storage_account: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Storage/storageAccounts/saxyzwebp5i4e]
+module.ApplicationResources.azurerm_lb.lb1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/loadBalancers/LB-XYZWeb]
+module.KeyVault.azurerm_key_vault_access_policy.kv1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.KeyVault/vaults/KV-XYZWeb/objectId/xx-xx-xx-xx-xx]
+module.ApplicationResources.azurerm_lb_backend_address_pool.backend1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/loadBalancers/LB-XYZWeb/backendAddressPools/backend-xyzweb]
+module.ApplicationResources.azurerm_lb_probe.xyz1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/loadBalancers/LB-XYZWeb/probes/lbprobe-xyzweb]
+module.vnet.azurerm_subnet.subnet_for_each["subnet1-app"]: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/virtualNetworks/VNET-Dev-XYZWeb/subnets/subnet1-app]
+module.vnet.azurerm_subnet.subnet_for_each["subnet2-db"]: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/virtualNetworks/VNET-Dev-XYZWeb/subnets/subnet2-db]
+module.DatabaseResources.azurerm_private_dns_zone_virtual_network_link.dns1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/privateDnsZones/xyzwebonlinesales.postgres.database.azure.com/virtualNetworkLinks/xyzwebonlinesales-link]
+module.KeyVault.azurerm_key_vault_secret.xyz-user: Refreshing state... [id=https://kv-xyzweb.vault.azure.net/secrets/username/7e86777ff8cb449ba0deb146607661a8]
+module.KeyVault.azurerm_key_vault_secret.xyz-password: Refreshing state... [id=https://kv-xyzweb.vault.azure.net/secrets/password/c207c205bd0e4419830d42950f307907]
+module.ApplicationResources.azurerm_lb_rule.xyz1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/loadBalancers/LB-XYZWeb/loadBalancingRules/http]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.DBforPostgreSQL/flexibleServers/psql-dev-xyzweb]
+module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1: Refreshing state... [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Compute/virtualMachineScaleSets/VMSS-Dev-XYZWeb]
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+ <= read (data resources)
+
+Terraform will perform the following actions:
+
+  # azurerm_resource_group.rg1 will be created
+  + resource "azurerm_resource_group" "rg1" {
+      + id       = (known after apply)
+      + location = "westus"
+      + name     = "RG-Dev-XYZWeb"
+      + tags     = {
+          + "Business-Owner" = "XYZ Corp"
+          + "Department"     = "Sales"
+          + "Description"    = "Resource Group for XYZ App"
+          + "Environment"    = "Dev"
+        }
+    }
+
+  # module.ApplicationResources.data.azurerm_key_vault.kvapp will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "azurerm_key_vault" "kvapp" {
+      + access_policy                   = (known after apply)
+      + enable_rbac_authorization       = (known after apply)
+      + enabled_for_deployment          = (known after apply)
+      + enabled_for_disk_encryption     = (known after apply)
+      + enabled_for_template_deployment = (known after apply)
+      + id                              = (known after apply)
+      + location                        = (known after apply)
+      + name                            = "KV-XYZWeb"
+      + network_acls                    = (known after apply)
+      + public_network_access_enabled   = (known after apply)
+      + purge_protection_enabled        = (known after apply)
+      + resource_group_name             = "RG-Dev-XYZWeb"
+      + sku_name                        = (known after apply)
+      + tags                            = (known after apply)
+      + tenant_id                       = (known after apply)
+      + vault_uri                       = (known after apply)
+    }
+
+  # module.ApplicationResources.data.azurerm_key_vault_secret.password will be read during apply
+  # (config refers to values not yet known)
+ <= data "azurerm_key_vault_secret" "password" {
+      + content_type            = (known after apply)
+      + expiration_date         = (known after apply)
+      + id                      = (known after apply)
+      + key_vault_id            = (known after apply)
+      + name                    = "password"
+      + not_before_date         = (known after apply)
+      + resource_id             = (known after apply)
+      + resource_versionless_id = (known after apply)
+      + tags                    = (known after apply)
+      + value                   = (sensitive value)
+      + versionless_id          = (known after apply)
+    }
+
+  # module.ApplicationResources.data.azurerm_key_vault_secret.user will be read during apply
+  # (config refers to values not yet known)
+ <= data "azurerm_key_vault_secret" "user" {
+      + content_type            = (known after apply)
+      + expiration_date         = (known after apply)
+      + id                      = (known after apply)
+      + key_vault_id            = (known after apply)
+      + name                    = "username"
+      + not_before_date         = (known after apply)
+      + resource_id             = (known after apply)
+      + resource_versionless_id = (known after apply)
+      + tags                    = (known after apply)
+      + value                   = (sensitive value)
+      + versionless_id          = (known after apply)
+    }
+
+  # module.ApplicationResources.azurerm_lb.lb1 will be created
+  + resource "azurerm_lb" "lb1" {
+      + id                   = (known after apply)
+      + location             = "westus"
+      + name                 = "LB-XYZWeb"
+      + private_ip_address   = (known after apply)
+      + private_ip_addresses = (known after apply)
+      + resource_group_name  = "RG-Dev-XYZWeb"
+      + sku                  = "Standard"
+      + sku_tier             = "Regional"
+
+      + frontend_ip_configuration {
+          + gateway_load_balancer_frontend_ip_configuration_id = (known after apply)
+          + id                                                 = (known after apply)
+          + inbound_nat_rules                                  = (known after apply)
+          + load_balancer_rules                                = (known after apply)
+          + name                                               = "FrontendIPConfiguration"
+          + outbound_rules                                     = (known after apply)
+          + private_ip_address                                 = (known after apply)
+          + private_ip_address_allocation                      = (known after apply)
+          + private_ip_address_version                         = (known after apply)
+          + public_ip_address_id                               = (known after apply)
+          + public_ip_prefix_id                                = (known after apply)
+          + subnet_id                                          = (known after apply)
+        }
+    }
+
+  # module.ApplicationResources.azurerm_lb_backend_address_pool.backend1 will be created
+  + resource "azurerm_lb_backend_address_pool" "backend1" {
+      + backend_ip_configurations = (known after apply)
+      + id                        = (known after apply)
+      + inbound_nat_rules         = (known after apply)
+      + load_balancing_rules      = (known after apply)
+      + loadbalancer_id           = (known after apply)
+      + name                      = "backend-xyzweb"
+      + outbound_rules            = (known after apply)
+    }
+
+  # module.ApplicationResources.azurerm_lb_probe.xyz1 will be created
+  + resource "azurerm_lb_probe" "xyz1" {
+      + id                  = (known after apply)
+      + interval_in_seconds = 15
+      + load_balancer_rules = (known after apply)
+      + loadbalancer_id     = (known after apply)
+      + name                = "lbprobe-xyzweb"
+      + number_of_probes    = 2
+      + port                = 80
+      + probe_threshold     = 1
+      + protocol            = (known after apply)
+    }
+
+  # module.ApplicationResources.azurerm_lb_rule.xyz1 will be created
+  + resource "azurerm_lb_rule" "xyz1" {
+      + backend_address_pool_ids       = (known after apply)
+      + backend_port                   = 80
+      + disable_outbound_snat          = false
+      + enable_floating_ip             = false
+      + frontend_ip_configuration_id   = (known after apply)
+      + frontend_ip_configuration_name = "FrontendIPConfiguration"
+      + frontend_port                  = 80
+      + id                             = (known after apply)
+      + idle_timeout_in_minutes        = (known after apply)
+      + load_distribution              = (known after apply)
+      + loadbalancer_id                = (known after apply)
+      + name                           = "http"
+      + probe_id                       = (known after apply)
+      + protocol                       = "Tcp"
+    }
+
+  # module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1 will be created
+  + resource "azurerm_linux_virtual_machine_scale_set" "linuxvmss1" {
+      + admin_password                                    = (sensitive value)
+      + admin_username                                    = (sensitive value)
+      + computer_name_prefix                              = (known after apply)
+      + disable_password_authentication                   = false
+      + do_not_run_extensions_on_overprovisioned_machines = false
+      + extension_operations_enabled                      = (known after apply)
+      + extensions_time_budget                            = "PT1H30M"
+      + health_probe_id                                   = (known after apply)
+      + id                                                = (known after apply)
+      + instances                                         = 2
+      + location                                          = "westus"
+      + max_bid_price                                     = -1
+      + name                                              = "VMSS-Dev-XYZWeb"
+      + overprovision                                     = true
+      + platform_fault_domain_count                       = (known after apply)
+      + priority                                          = "Regular"
+      + provision_vm_agent                                = true
+      + resource_group_name                               = "RG-Dev-XYZWeb"
+      + scale_in_policy                                   = (known after apply)
+      + single_placement_group                            = true
+      + sku                                               = "Standard_DS1_v2"
+      + tags                                              = {
+          + "Business-Owner" = "XYZ Corp"
+          + "Department"     = "Sales"
+          + "Description"    = "Linux VMSS for XYZWeb."
+          + "Environment"    = "Dev"
+        }
+      + unique_id                                         = (known after apply)
+      + upgrade_mode                                      = "Manual"
+      + zone_balance                                      = false
+
+      + network_interface {
+          + enable_accelerated_networking = false
+          + enable_ip_forwarding          = false
+          + name                          = "vNIC-XYZWeb"
+          + primary                       = true
+
+          + ip_configuration {
+              + load_balancer_backend_address_pool_ids = (known after apply)
+              + name                                   = "IPAddressConfiguration"
+              + primary                                = true
+              + subnet_id                              = (known after apply)
+              + version                                = "IPv4"
+            }
+        }
+
+      + os_disk {
+          + caching                   = "ReadWrite"
+          + disk_size_gb              = (known after apply)
+          + storage_account_type      = "Standard_LRS"
+          + write_accelerator_enabled = false
+        }
+
+      + source_image_reference {
+          + offer     = "0001-com-ubuntu-server-jammy"
+          + publisher = "Canonical"
+          + sku       = "22_04-lts"
+          + version   = "latest"
+        }
+    }
+
+  # module.ApplicationResources.azurerm_public_ip.pip1 will be created
+  + resource "azurerm_public_ip" "pip1" {
+      + allocation_method       = "Static"
+      + ddos_protection_mode    = "VirtualNetworkInherited"
+      + domain_name_label       = "xyzwebonlinesales"
+      + fqdn                    = (known after apply)
+      + id                      = (known after apply)
+      + idle_timeout_in_minutes = 4
+      + ip_address              = (known after apply)
+      + ip_version              = "IPv4"
+      + location                = "westus"
+      + name                    = "PIP-XYZWeb-LB"
+      + resource_group_name     = "RG-Dev-XYZWeb"
+      + sku                     = "Standard"
+      + sku_tier                = "Regional"
+      + tags                    = {
+          + "Description" = "Public IP for XYZWeb VMSS"
+        }
+    }
+
+  # module.ApplicationResources.azurerm_storage_account.storage_account will be created
+  + resource "azurerm_storage_account" "storage_account" {
+      + access_tier                        = (known after apply)
+      + account_kind                       = "StorageV2"
+      + account_replication_type           = "LRS"
+      + account_tier                       = "Standard"
+      + allow_nested_items_to_be_public    = true
+      + cross_tenant_replication_enabled   = true
+      + default_to_oauth_authentication    = false
+      + enable_https_traffic_only          = true
+      + id                                 = (known after apply)
+      + infrastructure_encryption_enabled  = false
+      + is_hns_enabled                     = false
+      + large_file_share_enabled           = (known after apply)
+      + location                           = "westus"
+      + min_tls_version                    = "TLS1_2"
+      + name                               = "saxyzwebp5i4e"
+      + nfsv3_enabled                      = false
+      + primary_access_key                 = (sensitive value)
+      + primary_blob_connection_string     = (sensitive value)
+      + primary_blob_endpoint              = (known after apply)
+      + primary_blob_host                  = (known after apply)
+      + primary_blob_internet_endpoint     = (known after apply)
+      + primary_blob_internet_host         = (known after apply)
+      + primary_blob_microsoft_endpoint    = (known after apply)
+      + primary_blob_microsoft_host        = (known after apply)
+      + primary_connection_string          = (sensitive value)
+      + primary_dfs_endpoint               = (known after apply)
+      + primary_dfs_host                   = (known after apply)
+      + primary_dfs_internet_endpoint      = (known after apply)
+      + primary_dfs_internet_host          = (known after apply)
+      + primary_dfs_microsoft_endpoint     = (known after apply)
+      + primary_dfs_microsoft_host         = (known after apply)
+      + primary_file_endpoint              = (known after apply)
+      + primary_file_host                  = (known after apply)
+      + primary_file_internet_endpoint     = (known after apply)
+      + primary_file_internet_host         = (known after apply)
+      + primary_file_microsoft_endpoint    = (known after apply)
+      + primary_file_microsoft_host        = (known after apply)
+      + primary_location                   = (known after apply)
+      + primary_queue_endpoint             = (known after apply)
+      + primary_queue_host                 = (known after apply)
+      + primary_queue_microsoft_endpoint   = (known after apply)
+      + primary_queue_microsoft_host       = (known after apply)
+      + primary_table_endpoint             = (known after apply)
+      + primary_table_host                 = (known after apply)
+      + primary_table_microsoft_endpoint   = (known after apply)
+      + primary_table_microsoft_host       = (known after apply)
+      + primary_web_endpoint               = (known after apply)
+      + primary_web_host                   = (known after apply)
+      + primary_web_internet_endpoint      = (known after apply)
+      + primary_web_internet_host          = (known after apply)
+      + primary_web_microsoft_endpoint     = (known after apply)
+      + primary_web_microsoft_host         = (known after apply)
+      + public_network_access_enabled      = true
+      + queue_encryption_key_type          = "Service"
+      + resource_group_name                = "RG-Dev-XYZWeb"
+      + secondary_access_key               = (sensitive value)
+      + secondary_blob_connection_string   = (sensitive value)
+      + secondary_blob_endpoint            = (known after apply)
+      + secondary_blob_host                = (known after apply)
+      + secondary_blob_internet_endpoint   = (known after apply)
+      + secondary_blob_internet_host       = (known after apply)
+      + secondary_blob_microsoft_endpoint  = (known after apply)
+      + secondary_blob_microsoft_host      = (known after apply)
+      + secondary_connection_string        = (sensitive value)
+      + secondary_dfs_endpoint             = (known after apply)
+      + secondary_dfs_host                 = (known after apply)
+      + secondary_dfs_internet_endpoint    = (known after apply)
+      + secondary_dfs_internet_host        = (known after apply)
+      + secondary_dfs_microsoft_endpoint   = (known after apply)
+      + secondary_dfs_microsoft_host       = (known after apply)
+      + secondary_file_endpoint            = (known after apply)
+      + secondary_file_host                = (known after apply)
+      + secondary_file_internet_endpoint   = (known after apply)
+      + secondary_file_internet_host       = (known after apply)
+      + secondary_file_microsoft_endpoint  = (known after apply)
+      + secondary_file_microsoft_host      = (known after apply)
+      + secondary_location                 = (known after apply)
+      + secondary_queue_endpoint           = (known after apply)
+      + secondary_queue_host               = (known after apply)
+      + secondary_queue_microsoft_endpoint = (known after apply)
+      + secondary_queue_microsoft_host     = (known after apply)
+      + secondary_table_endpoint           = (known after apply)
+      + secondary_table_host               = (known after apply)
+      + secondary_table_microsoft_endpoint = (known after apply)
+      + secondary_table_microsoft_host     = (known after apply)
+      + secondary_web_endpoint             = (known after apply)
+      + secondary_web_host                 = (known after apply)
+      + secondary_web_internet_endpoint    = (known after apply)
+      + secondary_web_internet_host        = (known after apply)
+      + secondary_web_microsoft_endpoint   = (known after apply)
+      + secondary_web_microsoft_host       = (known after apply)
+      + sftp_enabled                       = false
+      + shared_access_key_enabled          = true
+      + table_encryption_key_type          = "Service"
+      + tags                               = {
+          + "Description" = "Storage Account for XYZWeb VMSS."
+        }
+    }
+
+  # module.DatabaseResources.data.azurerm_key_vault.kvdb will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "azurerm_key_vault" "kvdb" {
+      + access_policy                   = (known after apply)
+      + enable_rbac_authorization       = (known after apply)
+      + enabled_for_deployment          = (known after apply)
+      + enabled_for_disk_encryption     = (known after apply)
+      + enabled_for_template_deployment = (known after apply)
+      + id                              = (known after apply)
+      + location                        = (known after apply)
+      + name                            = "KV-XYZWeb"
+      + network_acls                    = (known after apply)
+      + public_network_access_enabled   = (known after apply)
+      + purge_protection_enabled        = (known after apply)
+      + resource_group_name             = "RG-Dev-XYZWeb"
+      + sku_name                        = (known after apply)
+      + tags                            = (known after apply)
+      + tenant_id                       = (known after apply)
+      + vault_uri                       = (known after apply)
+    }
+
+  # module.DatabaseResources.data.azurerm_key_vault_secret.passworddb will be read during apply
+  # (config refers to values not yet known)
+ <= data "azurerm_key_vault_secret" "passworddb" {
+      + content_type            = (known after apply)
+      + expiration_date         = (known after apply)
+      + id                      = (known after apply)
+      + key_vault_id            = (known after apply)
+      + name                    = "password"
+      + not_before_date         = (known after apply)
+      + resource_id             = (known after apply)
+      + resource_versionless_id = (known after apply)
+      + tags                    = (known after apply)
+      + value                   = (sensitive value)
+      + versionless_id          = (known after apply)
+    }
+
+  # module.DatabaseResources.data.azurerm_key_vault_secret.userdb will be read during apply
+  # (config refers to values not yet known)
+ <= data "azurerm_key_vault_secret" "userdb" {
+      + content_type            = (known after apply)
+      + expiration_date         = (known after apply)
+      + id                      = (known after apply)
+      + key_vault_id            = (known after apply)
+      + name                    = "username"
+      + not_before_date         = (known after apply)
+      + resource_id             = (known after apply)
+      + resource_versionless_id = (known after apply)
+      + tags                    = (known after apply)
+      + value                   = (sensitive value)
+      + versionless_id          = (known after apply)
+    }
+
+  # module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1 will be created
+  + resource "azurerm_postgresql_flexible_server" "xyz1" {
+      + administrator_login           = (sensitive value)
+      + administrator_password        = (sensitive value)
+      + auto_grow_enabled             = false
+      + backup_retention_days         = (known after apply)
+      + delegated_subnet_id           = (known after apply)
+      + fqdn                          = (known after apply)
+      + geo_redundant_backup_enabled  = false
+      + id                            = (known after apply)
+      + location                      = "westus"
+      + name                          = "psql-dev-xyzweb"
+      + private_dns_zone_id           = (known after apply)
+      + public_network_access_enabled = (known after apply)
+      + resource_group_name           = "RG-Dev-XYZWeb"
+      + sku_name                      = "GP_Standard_D4s_v3"
+      + storage_mb                    = 32768
+      + tags                          = {
+          + "Business-Owner" = "XYZ Corp"
+          + "Department"     = "Sales"
+          + "Description"    = "PostgreSQL DB for XYZWeb."
+          + "Environment"    = "Dev"
+        }
+      + version                       = "16"
+    }
+
+  # module.DatabaseResources.azurerm_private_dns_zone.dns1 will be created
+  + resource "azurerm_private_dns_zone" "dns1" {
+      + id                                                    = (known after apply)
+      + max_number_of_record_sets                             = (known after apply)
+      + max_number_of_virtual_network_links                   = (known after apply)
+      + max_number_of_virtual_network_links_with_registration = (known after apply)
+      + name                                                  = "xyzwebonlinesales.postgres.database.azure.com"
+      + number_of_record_sets                                 = (known after apply)
+      + resource_group_name                                   = "RG-Dev-XYZWeb"
+    }
+
+  # module.DatabaseResources.azurerm_private_dns_zone_virtual_network_link.dns1 will be created
+  + resource "azurerm_private_dns_zone_virtual_network_link" "dns1" {
+      + id                    = (known after apply)
+      + name                  = "xyzwebonlinesales-link"
+      + private_dns_zone_name = "xyzwebonlinesales.postgres.database.azure.com"
+      + registration_enabled  = false
+      + resource_group_name   = "RG-Dev-XYZWeb"
+      + virtual_network_id    = (known after apply)
+    }
+
+  # module.KeyVault.azurerm_key_vault.kv1 will be created
+  + resource "azurerm_key_vault" "kv1" {
+      + access_policy                   = (known after apply)
+      + enabled_for_deployment          = true
+      + enabled_for_template_deployment = true
+      + id                              = (known after apply)
+      + location                        = "westus"
+      + name                            = "KV-XYZWeb"
+      + public_network_access_enabled   = true
+      + purge_protection_enabled        = false
+      + resource_group_name             = "RG-Dev-XYZWeb"
+      + sku_name                        = "standard"
+      + soft_delete_retention_days      = 90
+      + tags                            = {
+          + "Business-Owner" = "XYZ Corp"
+          + "Department"     = "Sales"
+          + "Description"    = "Key Vault for XYZWeb."
+          + "Environment"    = "Dev"
+        }
+      + tenant_id                       = "xx-xx-xx-xx-xx"
+      + vault_uri                       = (known after apply)
+    }
+
+  # module.KeyVault.azurerm_key_vault_access_policy.kv1 will be created
+  + resource "azurerm_key_vault_access_policy" "kv1" {
+      + id                 = (known after apply)
+      + key_permissions    = [
+          + "Get",
+          + "Create",
+        ]
+      + key_vault_id       = (known after apply)
+      + object_id          = "xx-xx-xx-xx-xx"
+      + secret_permissions = [
+          + "Get",
+          + "List",
+          + "Set",
+          + "Delete",
+          + "Purge",
+          + "Recover",
+        ]
+      + tenant_id          = "xx-xx-xx-xx-xx"
+    }
+
+  # module.KeyVault.azurerm_key_vault_secret.xyz-password will be created
+  + resource "azurerm_key_vault_secret" "xyz-password" {
+      + id                      = (known after apply)
+      + key_vault_id            = (known after apply)
+      + name                    = "password"
+      + resource_id             = (known after apply)
+      + resource_versionless_id = (known after apply)
+      + value                   = (sensitive value)
+      + version                 = (known after apply)
+      + versionless_id          = (known after apply)
+    }
+
+  # module.KeyVault.azurerm_key_vault_secret.xyz-user will be created
+  + resource "azurerm_key_vault_secret" "xyz-user" {
+      + id                      = (known after apply)
+      + key_vault_id            = (known after apply)
+      + name                    = "username"
+      + resource_id             = (known after apply)
+      + resource_versionless_id = (known after apply)
+      + value                   = (sensitive value)
+      + version                 = (known after apply)
+      + versionless_id          = (known after apply)
+    }
+
+  # module.vnet.azurerm_subnet.subnet_for_each["subnet1-app"] will be created
+  + resource "azurerm_subnet" "subnet_for_each" {
+      + address_prefixes                               = [
+          + "10.0.1.0/24",
+        ]
+      + enforce_private_link_endpoint_network_policies = false
+      + enforce_private_link_service_network_policies  = false
+      + id                                             = (known after apply)
+      + name                                           = "subnet1-app"
+      + private_endpoint_network_policies_enabled      = (known after apply)
+      + private_link_service_network_policies_enabled  = (known after apply)
+      + resource_group_name                            = "RG-Dev-XYZWeb"
+      + virtual_network_name                           = "VNET-Dev-XYZWeb"
+    }
+
+  # module.vnet.azurerm_subnet.subnet_for_each["subnet2-db"] will be created
+  + resource "azurerm_subnet" "subnet_for_each" {
+      + address_prefixes                               = [
+          + "10.0.2.0/24",
+        ]
+      + enforce_private_link_endpoint_network_policies = false
+      + enforce_private_link_service_network_policies  = false
+      + id                                             = (known after apply)
+      + name                                           = "subnet2-db"
+      + private_endpoint_network_policies_enabled      = (known after apply)
+      + private_link_service_network_policies_enabled  = (known after apply)
+      + resource_group_name                            = "RG-Dev-XYZWeb"
+      + service_endpoints                              = [
+          + "Microsoft.Storage",
+        ]
+      + virtual_network_name                           = "VNET-Dev-XYZWeb"
+
+      + delegation {
+          + name = "Microsoft.DBforPostgreSQL/flexibleServers"
+
+          + service_delegation {
+              + actions = [
+                  + "Microsoft.Network/virtualNetworks/subnets/join/action",
+                ]
+              + name    = "Microsoft.DBforPostgreSQL/flexibleServers"
+            }
+        }
+    }
+
+  # module.vnet.azurerm_virtual_network.vnet will be created
+  + resource "azurerm_virtual_network" "vnet" {
+      + address_space       = [
+          + "10.0.0.0/16",
+        ]
+      + dns_servers         = []
+      + guid                = (known after apply)
+      + id                  = (known after apply)
+      + location            = "westus"
+      + name                = "VNET-Dev-XYZWeb"
+      + resource_group_name = "RG-Dev-XYZWeb"
+      + subnet              = (known after apply)
+      + tags                = {
+          + "Business-Owner" = "XYZ Corp"
+          + "Department"     = "Sales"
+          + "Description"    = "Virtual Network for XYZ App"
+          + "Environment"    = "Dev"
+        }
+    }
+
+Plan: 18 to add, 0 to change, 0 to destroy.
+
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+azurerm_resource_group.rg1: Creating...
+azurerm_resource_group.rg1: Creation complete after 5s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb]
+module.vnet.azurerm_virtual_network.vnet: Creating...
+module.DatabaseResources.azurerm_private_dns_zone.dns1: Creating...
+module.KeyVault.azurerm_key_vault.kv1: Creating...
+module.ApplicationResources.azurerm_public_ip.pip1: Creating...
+module.ApplicationResources.azurerm_storage_account.storage_account: Creating...
+module.ApplicationResources.azurerm_public_ip.pip1: Still creating... [10s elapsed]
+module.DatabaseResources.azurerm_private_dns_zone.dns1: Still creating... [10s elapsed]
+module.vnet.azurerm_virtual_network.vnet: Still creating... [10s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [10s elapsed]
+module.ApplicationResources.azurerm_storage_account.storage_account: Still creating... [10s elapsed]
+module.ApplicationResources.azurerm_public_ip.pip1: Creation complete after 16s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/publicIPAddresses/PIP-XYZWeb-LB]
+module.ApplicationResources.azurerm_lb.lb1: Creating...
+module.vnet.azurerm_virtual_network.vnet: Creation complete after 19s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/virtualNetworks/VNET-Dev-XYZWeb]
+module.vnet.azurerm_subnet.subnet_for_each["subnet1-app"]: Creating...
+module.vnet.azurerm_subnet.subnet_for_each["subnet2-db"]: Creating...
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [20s elapsed]
+module.DatabaseResources.azurerm_private_dns_zone.dns1: Still creating... [20s elapsed]
+module.ApplicationResources.azurerm_storage_account.storage_account: Still creating... [20s elapsed]
+module.ApplicationResources.azurerm_lb.lb1: Creation complete after 7s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/loadBalancers/LB-XYZWeb]
+module.ApplicationResources.azurerm_lb_backend_address_pool.backend1: Creating...
+module.ApplicationResources.azurerm_lb_probe.xyz1: Creating...
+module.vnet.azurerm_subnet.subnet_for_each["subnet2-db"]: Still creating... [10s elapsed]
+module.vnet.azurerm_subnet.subnet_for_each["subnet1-app"]: Still creating... [10s elapsed]
+module.ApplicationResources.azurerm_lb_probe.xyz1: Creation complete after 7s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/loadBalancers/LB-XYZWeb/probes/lbprobe-xyzweb]
+module.ApplicationResources.azurerm_storage_account.storage_account: Still creating... [30s elapsed]
+module.DatabaseResources.azurerm_private_dns_zone.dns1: Still creating... [30s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [30s elapsed]
+module.ApplicationResources.azurerm_lb_backend_address_pool.backend1: Still creating... [10s elapsed]
+module.vnet.azurerm_subnet.subnet_for_each["subnet2-db"]: Creation complete after 18s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/virtualNetworks/VNET-Dev-XYZWeb/subnets/subnet2-db]
+module.vnet.azurerm_subnet.subnet_for_each["subnet1-app"]: Still creating... [20s elapsed]
+module.ApplicationResources.azurerm_storage_account.storage_account: Still creating... [40s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [40s elapsed]
+module.DatabaseResources.azurerm_private_dns_zone.dns1: Still creating... [40s elapsed]
+module.ApplicationResources.azurerm_lb_backend_address_pool.backend1: Still creating... [20s elapsed]
+module.ApplicationResources.azurerm_storage_account.storage_account: Creation complete after 43s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Storage/storageAccounts/saxyzwebp5i4e]
+module.ApplicationResources.azurerm_lb_backend_address_pool.backend1: Creation complete after 23s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/loadBalancers/LB-XYZWeb/backendAddressPools/backend-xyzweb]
+module.ApplicationResources.azurerm_lb_rule.xyz1: Creating...
+module.vnet.azurerm_subnet.subnet_for_each["subnet1-app"]: Still creating... [30s elapsed]
+module.DatabaseResources.azurerm_private_dns_zone.dns1: Still creating... [50s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [50s elapsed]
+module.DatabaseResources.azurerm_private_dns_zone.dns1: Creation complete after 51s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/privateDnsZones/xyzwebonlinesales.postgres.database.azure.com]
+module.DatabaseResources.azurerm_private_dns_zone_virtual_network_link.dns1: Creating...
+module.vnet.azurerm_subnet.subnet_for_each["subnet1-app"]: Creation complete after 35s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/virtualNetworks/VNET-Dev-XYZWeb/subnets/subnet1-app]
+module.ApplicationResources.azurerm_lb_rule.xyz1: Still creating... [10s elapsed]
+module.ApplicationResources.azurerm_lb_rule.xyz1: Creation complete after 12s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/loadBalancers/LB-XYZWeb/loadBalancingRules/http]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [1m0s elapsed]
+module.DatabaseResources.azurerm_private_dns_zone_virtual_network_link.dns1: Still creating... [10s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [1m10s elapsed]
+module.DatabaseResources.azurerm_private_dns_zone_virtual_network_link.dns1: Still creating... [20s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [1m20s elapsed]
+module.DatabaseResources.azurerm_private_dns_zone_virtual_network_link.dns1: Still creating... [30s elapsed]
+module.DatabaseResources.azurerm_private_dns_zone_virtual_network_link.dns1: Creation complete after 38s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Network/privateDnsZones/xyzwebonlinesales.postgres.database.azure.com/virtualNetworkLinks/xyzwebonlinesales-link]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [1m30s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [1m40s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [1m50s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [2m0s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [2m10s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [2m20s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [2m30s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [2m40s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Still creating... [2m50s elapsed]
+module.KeyVault.azurerm_key_vault.kv1: Creation complete after 2m55s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.KeyVault/vaults/KV-XYZWeb]
+module.ApplicationResources.data.azurerm_key_vault.kvapp: Reading...
+module.DatabaseResources.data.azurerm_key_vault.kvdb: Reading...
+module.KeyVault.azurerm_key_vault_access_policy.kv1: Creating...
+module.ApplicationResources.data.azurerm_key_vault.kvapp: Read complete after 1s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.KeyVault/vaults/KV-XYZWeb]
+module.DatabaseResources.data.azurerm_key_vault.kvdb: Read complete after 3s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.KeyVault/vaults/KV-XYZWeb]
+module.KeyVault.azurerm_key_vault_access_policy.kv1: Still creating... [10s elapsed]
+module.KeyVault.azurerm_key_vault_access_policy.kv1: Creation complete after 12s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.KeyVault/vaults/KV-XYZWeb/objectId/xx-xx-xx-xx-xx]
+module.KeyVault.azurerm_key_vault_secret.xyz-password: Creating...
+module.KeyVault.azurerm_key_vault_secret.xyz-user: Creating...
+module.KeyVault.azurerm_key_vault_secret.xyz-user: Creation complete after 1s [id=https://kv-xyzweb.vault.azure.net/secrets/username/f32a58288e5b4c2483390bac63c77ff8]
+module.ApplicationResources.data.azurerm_key_vault_secret.user: Reading...
+module.DatabaseResources.data.azurerm_key_vault_secret.userdb: Reading...
+module.ApplicationResources.data.azurerm_key_vault_secret.user: Read complete after 0s [id=https://kv-xyzweb.vault.azure.net/secrets/username/f32a58288e5b4c2483390bac63c77ff8]
+module.DatabaseResources.data.azurerm_key_vault_secret.userdb: Read complete after 0s [id=https://kv-xyzweb.vault.azure.net/secrets/username/f32a58288e5b4c2483390bac63c77ff8]
+module.KeyVault.azurerm_key_vault_secret.xyz-password: Creation complete after 1s [id=https://kv-xyzweb.vault.azure.net/secrets/password/be77112fc91043c28786b1ee2fb9358e]
+module.ApplicationResources.data.azurerm_key_vault_secret.password: Reading...
+module.DatabaseResources.data.azurerm_key_vault_secret.passworddb: Reading...
+module.DatabaseResources.data.azurerm_key_vault_secret.passworddb: Read complete after 0s [id=https://kv-xyzweb.vault.azure.net/secrets/password/be77112fc91043c28786b1ee2fb9358e]
+module.ApplicationResources.data.azurerm_key_vault_secret.password: Read complete after 0s [id=https://kv-xyzweb.vault.azure.net/secrets/password/be77112fc91043c28786b1ee2fb9358e]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Creating...
+module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1: Creating...
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [10s elapsed]
+module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1: Still creating... [10s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [20s elapsed]
+module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1: Still creating... [20s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [30s elapsed]
+module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1: Still creating... [30s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [40s elapsed]
+module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1: Still creating... [40s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [50s elapsed]
+module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1: Still creating... [50s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [1m0s elapsed]
+module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1: Still creating... [1m0s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [1m10s elapsed]
+module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1: Still creating... [1m10s elapsed]
+module.ApplicationResources.azurerm_linux_virtual_machine_scale_set.linuxvmss1: Creation complete after 1m19s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.Compute/virtualMachineScaleSets/VMSS-Dev-XYZWeb]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [1m20s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [1m30s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [1m40s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [1m50s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [2m0s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [2m10s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [2m20s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [2m30s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [2m40s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [2m50s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [3m0s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [3m10s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [3m20s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [3m30s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [3m40s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [3m50s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Still creating... [4m0s elapsed]
+module.DatabaseResources.azurerm_postgresql_flexible_server.xyz1: Creation complete after 4m10s [id=/subscriptions/xx-xx-xx-xx-xx/resourceGroups/RG-Dev-XYZWeb/providers/Microsoft.DBforPostgreSQL/flexibleServers/psql-dev-xyzweb]
+
+Apply complete! Resources: 18 added, 0 changed, 0 destroyed.
