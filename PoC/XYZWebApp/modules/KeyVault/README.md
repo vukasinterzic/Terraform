@@ -1,0 +1,3 @@
+# MODULE: KeyVault
+
+This module creates an Azure Key Vault configured for secure storage and management of secrets, keys, and certificates. It's tailored to support automated deployments and template deployments, making it suitable for both development and production environments. The module also includes access policies for the current Azure user context, granting permissions to manage keys and secrets within the Key Vault. Additionally, it generates a random password and stores it along with a predefined username as secrets in the Key Vault, ensuring that sensitive credentials are securely managed and easily accessible to authorized applications and services.
