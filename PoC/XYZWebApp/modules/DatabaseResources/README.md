@@ -1,0 +1,3 @@
+# MODULE: DatabaseResources
+
+This module provisions a fully managed PostgreSQL Flexible Server instance in Azure, ensuring secure and scalable database services for applications. It integrates the database server with Azure's networking and DNS services by creating a private DNS zone specifically for PostgreSQL, and links this DNS zone to a specified virtual network. This setup enhances security and connectivity by ensuring that the database server can be resolved and accessed privately within the virtual network. The module also securely retrieves database credentials from Azure Key Vault, further encapsulating best practices in security and configuration management.
