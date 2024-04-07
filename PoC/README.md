@@ -6,7 +6,7 @@ This folder contains complete PoC solutions implemented using Terraform on Azure
 
 ## Folder Structure
 
-- **[XYZWebApp]**: [Configurations for provisioning a robust and scalable backend infrastructure for XYZ Corp's new web application, including virtual networks, VM scale sets, managed disks, a PostgreSQL database, and more, ensuring best practices in cloud resource management and infrastructure as code.]
+- **XYZWebApp**: Configurations for provisioning a robust and scalable backend infrastructure for XYZ Corp's new web application, including virtual networks, VM scale sets, managed disks, a PostgreSQL database, and more, ensuring best practices in cloud resource management and infrastructure as code.
 
 This repository contains the Terraform 
 
