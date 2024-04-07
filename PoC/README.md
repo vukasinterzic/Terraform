@@ -6,12 +6,17 @@ This folder contains complete PoC solutions implemented using Terraform on Azure
 
 ## Folder Structure
 
-- **[XYZWebApp]**: [Description of the solution, including its purpose and key features.]
+- **[XYZWebApp]**: [Configurations for provisioning a robust and scalable backend infrastructure for XYZ Corp's new web application, including virtual networks, VM scale sets, managed disks, a PostgreSQL database, and more, ensuring best practices in cloud resource management and infrastructure as code.]
 
+This repository contains the Terraform 
 
-3. **Choose a Solution**: Choose a PoC solution from the folder based on your requirements and interests.
+### Choose a Solution
 
-4. **Follow the Instructions**: Each PoC solution folder contains a README.md file with detailed instructions on how to deploy and use the solution using Terraform.
+Choose a PoC solution from the folder based on your requirements and interests.
+
+### Follow the Instructions
+
+Each PoC solution folder contains a README.md file with detailed instructions on how to deploy and use the solution using Terraform.
 
 ## Contributing
 
